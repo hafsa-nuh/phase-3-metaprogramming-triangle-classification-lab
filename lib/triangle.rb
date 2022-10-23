@@ -9,6 +9,10 @@ class Triangle
     @side3 = side3 
   end
 
+  # Triangle#kind returns :equilateral when all sides are equal
+    #  Failure/Error: raise TriangleError unless valid_num? && valid_triangle?
+    #  NoMethodError:
+      #  undefined method `valid_num?' for #<Triangle:0x00007fe50a17b078 @side1=2, @side2=2, @side3=2>
   def valid_num?
     [@side1, @side2, @side3].all? { |num| num > 0}
   end
